@@ -12,6 +12,16 @@
 
 def count_letters (string)
   result = {} # You'll need an empty hash to get started!
-
+  letters = string.split('')
+  for letter in letters do
+    if result[letter] 
+      result[letter] += 1
+    else 
+      result[letter] = 1
+    end
+  end
   return result # return the hash
 end
+
+
+puts count_letters("mississippi")
